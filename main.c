@@ -91,9 +91,9 @@ static ble_uuid_t m_adv_uuids[] = {{BLE_UUID_DEVICE_INFORMATION_SERVICE, BLE_UUI
 void hible_write_handler(hible_t *p_ble, uint8_t new_state)
 {
     if (new_state) {
-        nrf_gpio_pin_set(HIBLE_SW_PIN);
-    } else {
         nrf_gpio_pin_clear(HIBLE_SW_PIN);
+    } else {
+        nrf_gpio_pin_set(HIBLE_SW_PIN);
     }
 }
                                    
